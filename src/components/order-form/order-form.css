@@ -1,0 +1,11 @@
+.orderFormContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}

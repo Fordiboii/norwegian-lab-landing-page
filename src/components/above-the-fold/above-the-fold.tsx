@@ -9,6 +9,7 @@ const AboveTheFold: FC = () => (
     <a href="/order">
       <button>Bestill nå</button>
     </a>
+    <div style={{ paddingBottom: '1em' }}></div>
   </> 
 );
 
