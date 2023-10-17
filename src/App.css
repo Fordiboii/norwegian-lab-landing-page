@@ -1,11 +1,10 @@
 .mainContainer {
-  min-height: 80vh;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 5em 5em 10em 5em;
 }
 
 @media (width <= 420px) {
   .mainContainer {
     margin-bottom: 40px;
+    padding: 1.5em;
   }
 }
