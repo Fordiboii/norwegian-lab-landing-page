@@ -10,5 +10,10 @@
   "form_postal_code": "Postnummer",
   "form_country": "Land",
   "form_order": "Bestill",
-  "form_submit_success_message": "Takk for din bestilling!"
+  "form_submit_success_message": "Takk for din bestilling!",
+
+  "form_missing_value": "Vennligst fyll ut feltet.",
+  "form_bad_input": "Feil format",
+  "form_must_be_alphanumeric": "Må være alfanumerisk.",
+  "form_wrong_email_format": "Vennligst skriv en epostadresse på formatet <din-epost>@<ditt-domene>."
 }

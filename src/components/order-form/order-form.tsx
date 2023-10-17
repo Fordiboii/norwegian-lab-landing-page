@@ -1,9 +1,9 @@
-import React, { FC, useContext, useState } from "react";
+import React, { FC, useState } from "react";
 import './order-form.css';
 import { LANGUAGES } from "../../utils/languages";
-import { LanguageContext } from "../../context/language-context";
 import { alphaNumericRegex } from "../../utils/string-patterns";
 import { useTranslation } from "react-i18next";
+import { TFunction } from "i18next";
 
 const FORM_INPUT_IDS = Object.freeze({
   FIRST_NAME: 'FIRST_NAME',
@@ -15,40 +15,44 @@ const FORM_INPUT_IDS = Object.freeze({
   COUNTRY: 'COUNTRY'
 });
 
-const handleFormInputValidationError = (e: React.FormEvent<HTMLInputElement>, language: string) => {
+const handleFormInputValidationError = (e: React.FormEvent<HTMLInputElement>, language: string, t: TFunction) => {
   const target = e.target as HTMLInputElement;
+  const { type: inputType } = target;
   
-  // only translate for other languages than English
+  // only translate for other languages than English (which is the default)
   if (language !== LANGUAGES.EN) {
-    if (target.validity.valueMissing) {
-      target.setCustomValidity('Vennligst fyll ut feltet.');
-    } else if (target.validity.badInput) {
-      target.setCustomValidity('Feilmelding.')
-    } else if (target.validity.patternMismatch) {
-      target.setCustomValidity('Feilmelding.')
-    } else if (target.validity.rangeOverflow) {
-      target.setCustomValidity('Feilmelding.')
-    } else if (target.validity.rangeUnderflow) {
-      target.setCustomValidity('Feilmelding.')
-    } else if (target.validity.stepMismatch) {
-      target.setCustomValidity('Feilmelding.')
-    } else if (target.validity.tooLong) {
-      target.setCustomValidity('Feilmelding.')
-    } else if (target.validity.tooShort) {
-      target.setCustomValidity('Feilmelding.')
-    } else if (target.validity.typeMismatch) {
-      target.setCustomValidity('Feilmelding.')
-    } else {
-      // TODO: handle clearing custom error correctly
-      // Reset custom error
-      target.setCustomValidity('');
+    switch (inputType) {
+      case 'email':
+        if (target.validity.valueMissing) {
+          target.setCustomValidity(t('form_missing_value'));
+        } else if (target.validity.patternMismatch) {
+          target.setCustomValidity(t('form_bad_pattern'))
+        } else if (target.validity.typeMismatch) {
+          target.setCustomValidity(t('form_wrong_email_format'))
+        } else {
+          // TODO: handle clearing custom error correctly
+          target.setCustomValidity('');
+        }
+        break;
+      case 'text':
+        if (target.validity.valueMissing) {
+          target.setCustomValidity(t('form_missing_value'));
+        } else if (target.validity.badInput) {
+          target.setCustomValidity(t('form_must_be_alphanumeric'))
+        } else {
+          // TODO: handle clearing custom error correctly
+          target.setCustomValidity('');
+        }
+        break;
+      default:
+        console.warn(`No custom error messages for type ${inputType}`)
     }
   }
 }
 
 const OrderForm: FC = () => {
-  const { t } = useTranslation();
-  const { language } = useContext(LanguageContext);
+  const { i18n, t } = useTranslation();
+  const { language } = i18n;
   const [submitStatus, setSubmitStatus] = useState(false);
   
   const handleSubmit = (e: React.FormEvent) => {
@@ -69,7 +73,7 @@ const OrderForm: FC = () => {
             id={FORM_INPUT_IDS.FIRST_NAME}
             required
             placeholder={t('form_first_name')}
-            onInvalid={(e) => handleFormInputValidationError(e, language)}
+            onInvalid={(e) => handleFormInputValidationError(e, language, t)}
           />
           <input
             className="twoColumn"
@@ -78,7 +82,7 @@ const OrderForm: FC = () => {
             id={FORM_INPUT_IDS.SURNAME}
             required
             placeholder={t('form_surname')}
-            onInvalid={(e) => handleFormInputValidationError(e, language)}
+            onInvalid={(e) => handleFormInputValidationError(e, language, t)}
           />
         </div>
         <input
@@ -86,14 +90,14 @@ const OrderForm: FC = () => {
           id={FORM_INPUT_IDS.EMAIL}
           required
           placeholder={t('form_email')}
-          onInvalid={(e) => handleFormInputValidationError(e, language)}
+          onInvalid={(e) => handleFormInputValidationError(e, language, t)}
         />
         <input
           type="text"
           id={FORM_INPUT_IDS.ADDRESS}
           required
           placeholder={t('form_address')}
-          onInvalid={(e) => handleFormInputValidationError(e, language)}
+          onInvalid={(e) => handleFormInputValidationError(e, language, t)}
         />
         <div className="twoColumnsContainer">
           <input
@@ -101,14 +105,14 @@ const OrderForm: FC = () => {
             id={FORM_INPUT_IDS.CITY}
             required
             placeholder={t('form_city')}
-            onInvalid={(e) => handleFormInputValidationError(e, language)}
+            onInvalid={(e) => handleFormInputValidationError(e, language, t)}
           />
           <input
             type="text"
             id={FORM_INPUT_IDS.POSTAL_CODE}
             required
             placeholder={t('form_postal_code')}
-            onInvalid={(e) => handleFormInputValidationError(e, language)}
+            onInvalid={(e) => handleFormInputValidationError(e, language, t)}
           />
         </div>
         <input
@@ -116,7 +120,7 @@ const OrderForm: FC = () => {
           id={FORM_INPUT_IDS.COUNTRY}
           required
           placeholder={t('form_country')}
-          onInvalid={(e) => handleFormInputValidationError(e, language)}
+          onInvalid={(e) => handleFormInputValidationError(e, language, t)}
         />
         <input type="submit" value={t('form_order')}></input>
       </form>
