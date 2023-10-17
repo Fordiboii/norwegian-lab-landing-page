@@ -15,5 +15,11 @@
   "form_missing_value": "Vennligst fyll ut feltet.",
   "form_bad_input": "Feil format",
   "form_must_be_alphanumeric": "Må være alfanumerisk.",
-  "form_wrong_email_format": "Vennligst skriv en epostadresse på formatet <din-epost>@<ditt-domene>."
+  "form_wrong_email_format": "Vennligst skriv en epostadresse på formatet <din-epost>@<ditt-domene>.",
+
+  "footer_all_rights_reserved": "Alle rettigheter forbeholdt",
+  "footer_contact": "Kontakt oss",
+  "footer_privact_policy": "Personvernpolicy",
+  "footer_terms_and_conditions": "Vilkår & betingelser",
+  "footer_author": "Forfatter"
 }

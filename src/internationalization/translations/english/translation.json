@@ -2,6 +2,7 @@
   "above_the_fold_header": "Ready to take your health to new heights?",
   "above_the_fold_description": "At Norwegian Lab, we offer innovative and world-leading health products with proven effectiveness. Join thousands of others and become a healthier person with more energy today!",
   "above_the_fold_order_now": "Order now",
+
   "form_first_name": "First name",
   "form_surname": "Surname",
   "form_email": "Email",
@@ -11,5 +12,11 @@
   "form_country": "Country",
   "form_order": "Order",
   "form_submit_success_message": "Thank you for your order!",
-  "form_must_be_alphanumeric": "Must be alphanumeric."
+  "form_must_be_alphanumeric": "Must be alphanumeric.",
+
+  "footer_all_rights_reserved": "All rights reserved",
+  "footer_contact": "Contact us",
+  "footer_privact_policy": "Privacy policy",
+  "footer_terms_and_conditions": "Terms & conditions",
+  "footer_author": "Author"
 }
