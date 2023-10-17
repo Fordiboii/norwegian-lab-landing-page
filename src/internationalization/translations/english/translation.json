@@ -1,0 +1,10 @@
+{
+  "first_name": "First name",
+  "surname": "Surname",
+  "email": "Email",
+  "address": "Street address",
+  "city": "City",
+  "postal_code": "Postal code",
+  "country": "Country",
+  "order": "Order"
+}

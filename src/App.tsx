@@ -6,6 +6,7 @@ import Header from './components/header/header'
 import OrderForm from './components/order-form/order-form'
 import { LANGUAGES } from './utils/languages'
 import { LanguageContext } from './context/language-context'
+import "./internationalization/i18n";
 
 const App: FC = () => {
   const [language, setLanguage] = useState(LANGUAGES.NO as string);

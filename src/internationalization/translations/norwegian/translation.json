@@ -1,0 +1,10 @@
+{
+  "first_name": "Fornavn",
+  "surname": "Etternavn",
+  "email": "Epost",
+  "address": "Gateadresse",
+  "city": "By",
+  "postal_code": "Postnummer",
+  "country": "Land",
+  "order": "Bestill"
+}

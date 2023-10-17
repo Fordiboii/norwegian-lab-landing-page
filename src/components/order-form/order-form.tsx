@@ -3,6 +3,7 @@ import './order-form.css';
 import { LANGUAGES } from "../../utils/languages";
 import { LanguageContext } from "../../context/language-context";
 import { alphaNumericRegex } from "../../utils/string-patterns";
+import { useTranslation } from "react-i18next";
 
 const FORM_INPUT_IDS = Object.freeze({
   FIRST_NAME: 'FIRST_NAME',
@@ -15,9 +16,10 @@ const FORM_INPUT_IDS = Object.freeze({
 });
 
 const OrderForm: FC = () => {
+  const { t } = useTranslation();
   const { language } = useContext(LanguageContext);
   const [submitStatus, setSubmitStatus] = useState(false);
-
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitStatus(true);
@@ -66,7 +68,7 @@ const OrderForm: FC = () => {
             pattern={alphaNumericRegex}
             id={FORM_INPUT_IDS.FIRST_NAME}
             required
-            placeholder={"Fornavn"}
+            placeholder={t('first_name')}
             onInvalid={(e) => handleFormInputValidationError(e, language)}
           />
           <input
@@ -75,7 +77,7 @@ const OrderForm: FC = () => {
             pattern={alphaNumericRegex}
             id={FORM_INPUT_IDS.SURNAME}
             required
-            placeholder={"Etternavn"}
+            placeholder={t('surname')}
             onInvalid={(e) => handleFormInputValidationError(e, language)}
           />
         </div>
@@ -83,14 +85,14 @@ const OrderForm: FC = () => {
           type="email"
           id={FORM_INPUT_IDS.EMAIL}
           required
-          placeholder={"Epost"}
+          placeholder={t('email')}
           onInvalid={(e) => handleFormInputValidationError(e, language)}
         />
         <input
           type="text"
           id={FORM_INPUT_IDS.ADDRESS}
           required
-          placeholder={"Gateadresse"}
+          placeholder={t('address')}
           onInvalid={(e) => handleFormInputValidationError(e, language)}
         />
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>
@@ -98,14 +100,14 @@ const OrderForm: FC = () => {
             type="text"
             id={FORM_INPUT_IDS.CITY}
             required
-            placeholder={"By"}
+            placeholder={t('city')}
             onInvalid={(e) => handleFormInputValidationError(e, language)}
           />
           <input
             type="text"
             id={FORM_INPUT_IDS.POSTAL_CODE}
             required
-            placeholder={"Postnummer"}
+            placeholder={t('postal_code')}
             onInvalid={(e) => handleFormInputValidationError(e, language)}
           />
         </div>
@@ -113,10 +115,10 @@ const OrderForm: FC = () => {
           type="text"
           id={FORM_INPUT_IDS.COUNTRY}
           required
-          placeholder={"Land"}
+          placeholder={t('country')}
           onInvalid={(e) => handleFormInputValidationError(e, language)}
         />
-        <input type="submit" value={"Bestill"}></input>
+        <input type="submit" value={t('order')}></input>
       </form>
       )}
     </div>
