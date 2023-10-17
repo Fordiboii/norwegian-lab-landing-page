@@ -11,5 +11,5 @@
   "form_country": "Country",
   "form_order": "Order",
   "form_submit_success_message": "Thank you for your order!",
-  "form_bad_pattern": "Must be alphanumeric."
+  "form_must_be_alphanumeric": "Must be alphanumeric."
 }
