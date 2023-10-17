@@ -1,16 +1,21 @@
 import React, { FC } from "react";
+import { useTranslation } from "react-i18next";
 
-const AboveTheFold: FC = () => (
-  <>
-    <h1>{"Ta helsen til nye høyder?"}</h1>
-    <p>
-      {"Hos Norwegian Labs tilbyr vi innovative og verdensledende helseprodukter med påvist effekt. Gjør som tusenvis andre og bli et sunnere menneske med mer energi idag!"}
-    </p>
-    <a href="/order">
-      <button>Bestill nå</button>
-    </a>
-    <div style={{ paddingBottom: '1em' }}></div>
-  </> 
-);
+const AboveTheFold: FC = () => {
+  const { t } = useTranslation();
+
+  return (
+    <>
+      <h1>{t('above_the_fold_header')}</h1>
+      <p>
+        {t('above_the_fold_description')}
+      </p>
+      <a href="/order">
+        <button>{t('above_the_fold_order_now')}</button>
+      </a>
+      <div style={{ paddingBottom: '1em' }}></div>
+    </> 
+  );
+}
 
 export default AboveTheFold;

@@ -1,10 +1,14 @@
 {
-  "first_name": "Fornavn",
-  "surname": "Etternavn",
-  "email": "Epost",
-  "address": "Gateadresse",
-  "city": "By",
-  "postal_code": "Postnummer",
-  "country": "Land",
-  "order": "Bestill"
+  "above_the_fold_header": "Klar til å ta helsen til nye høyder?",
+  "above_the_fold_description": "Hos Norwegian Labs tilbyr vi innovative og verdensledende helseprodukter med påvist effekt. Gjør som tusenvis andre og bli et sunnere menneske med mer energi idag!",
+  "above_the_fold_order_now": "Bestill nå",
+  "form_first_name": "Fornavn",
+  "form_surname": "Etternavn",
+  "form_email": "Epost",
+  "form_address": "Gateadresse",
+  "form_city": "By",
+  "form_postal_code": "Postnummer",
+  "form_country": "Land",
+  "form_order": "Bestill",
+  "form_submit_success_message": "Takk for din bestilling!"
 }

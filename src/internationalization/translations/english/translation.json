@@ -1,10 +1,14 @@
 {
-  "first_name": "First name",
-  "surname": "Surname",
-  "email": "Email",
-  "address": "Street address",
-  "city": "City",
-  "postal_code": "Postal code",
-  "country": "Country",
-  "order": "Order"
+  "above_the_fold_header": "Ready to take your health to new heights?",
+  "above_the_fold_description": "At Norwegian Labs, we offer innovative and world-leading health products with proven effectiveness. Join thousands of others and become a healthier person with more energy today!",
+  "above_the_fold_order_now": "Order now",
+  "form_first_name": "First name",
+  "form_surname": "Surname",
+  "form_email": "Email",
+  "form_address": "Street address",
+  "form_city": "City",
+  "form_postal_code": "Postal code",
+  "form_country": "Country",
+  "form_order": "Order",
+  "form_submit_success_message": "Thank you for your order!"
 }

@@ -9,3 +9,12 @@
   flex-direction: column;
   max-width: 500px;
 }
+
+.twoColumnsContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.twoColumn {
+  flex-grow: 1;
+}
