@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import './App.css'
 import AboveTheFold from './components/above-the-fold/above-the-fold'
 import Footer from './components/footer/footer'
