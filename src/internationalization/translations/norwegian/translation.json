@@ -11,6 +11,7 @@
   "form_country": "Land",
   "form_order": "Bestill",
   "form_submit_success_message": "Takk for din bestilling!",
+  "form_header": "Bestillingsskjema",
 
   "form_missing_value": "Vennligst fyll ut feltet.",
   "form_bad_input": "Feil format",

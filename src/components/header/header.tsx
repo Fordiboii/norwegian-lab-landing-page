@@ -14,12 +14,10 @@ const Header: FC = () => {
   }
 
   return (
-    <div className="header">
-      <select onChange={handleChange} defaultValue={language} className="languageSelector">
-        <option value={LANGUAGES.EN}>{LANGUAGES.EN.toUpperCase()}</option>
-        <option value={LANGUAGES.NO}>{LANGUAGES.NO.toUpperCase()}</option>
-      </select>
-    </div>  
+    <select onChange={handleChange} defaultValue={language} className="languageSelector">
+      <option value={LANGUAGES.EN}>{LANGUAGES.EN.toUpperCase()}</option>
+      <option value={LANGUAGES.NO}>{LANGUAGES.NO.toUpperCase()}</option>
+    </select>
   );
 }
 

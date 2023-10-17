@@ -74,6 +74,7 @@ const OrderForm: FC = () => {
         ? (<h2>{t('form_submit_success_message')}</h2>)
         : (
           <form onSubmit={handleSubmit} className="orderForm">
+            <h3>{t("form_header")}</h3>
             <div className="twoColumnsContainer">
               <input
                 className="twoColumn"

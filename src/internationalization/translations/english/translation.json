@@ -13,6 +13,7 @@
   "form_order": "Order",
   "form_submit_success_message": "Thank you for your order!",
   "form_must_be_alphanumeric": "Must be alphanumeric.",
+  "form_header": "Order form",
 
   "footer_all_rights_reserved": "All rights reserved",
   "footer_contact": "Contact us",
