@@ -8,12 +8,14 @@ import "./internationalization/i18n";
 
 const App: FC = () => {
   return (
-    <div className='mainContainer'>
+    <>
       <Header />
-      <AboveTheFold/>
-      <OrderForm />
+        <div className='mainContainer'>
+          <AboveTheFold/>
+          <OrderForm />
+        </div>
       <Footer />
-    </div>
+    </>
   )
 }
 
