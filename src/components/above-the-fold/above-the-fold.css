@@ -44,7 +44,7 @@ button {
   .wrapper {
     flex-direction: column;
     height: 600px;
-    padding-bottom: 2em;
+    padding-bottom: 10em;
   }
   .imageContainer {
     width: 100%;

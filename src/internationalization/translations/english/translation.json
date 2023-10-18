@@ -1,6 +1,6 @@
 {
   "above_the_fold_header": "Ready to take your health to new heights?",
-  "above_the_fold_description": "At Norwegian Lab, we offer innovative and world-leading health products with proven effectiveness. Join thousands of others and become a healthier person with more energy today!",
+  "above_the_fold_description": "At Norwegian Lab, we offer innovative and world-leading health products with proven effectiveness. Right now, we have a limited offer with a 50% discount on BioBelly, a supplement with five billion probiotic bacteria for a healthier gut. Join thousands of others and order BioBelly today to become a healthier person with increased energy!",
   "above_the_fold_order_now": "Order now",
 
   "form_first_name": "First name",
@@ -10,7 +10,7 @@
   "form_city": "City",
   "form_postal_code": "Postal code",
   "form_country": "Country",
-  "form_order": "Order",
+  "form_order": "Confirm order",
   "form_submit_success_message": "Thank you for your order!",
   "form_must_be_alphanumeric": "Must be alphanumeric.",
   "form_header": "Order form",
