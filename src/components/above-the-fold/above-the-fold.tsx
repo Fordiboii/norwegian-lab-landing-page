@@ -2,6 +2,8 @@ import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import './above-the-fold.css';
 
+const fjordImageUrl = "https://images.squarespace-cdn.com/content/v1/5d87c3ec1b269753a392c57e/1569182116125-QUCJKKES5KLP2L47XRR2/AdobeStock_190816756.jpeg";
+
 const AboveTheFold: FC = () => {
   const { t } = useTranslation();
 
@@ -18,7 +20,7 @@ const AboveTheFold: FC = () => {
         }}>{t('above_the_fold_order_now')}</button>
       </div>
       <div className="imageContainer">
-        <img src="https://images.squarespace-cdn.com/content/v1/5d87c3ec1b269753a392c57e/1569182116125-QUCJKKES5KLP2L47XRR2/AdobeStock_190816756.jpeg"></img>
+        <img src={fjordImageUrl}></img>
       </div>
     </div> 
   );

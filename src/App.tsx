@@ -10,10 +10,10 @@ const App: FC = () => {
   return (
     <>
       <Header />
-        <div className='mainContainer'>
-          <AboveTheFold/>
-          <OrderForm />
-        </div>
+      <div className='mainContainer'>
+        <AboveTheFold/>
+        <OrderForm />
+      </div>
       <Footer />
     </>
   )

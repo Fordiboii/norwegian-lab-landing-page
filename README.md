@@ -1,27 +1,18 @@
-# React + TypeScript + Vite
+# Norwegian Lab - Frontend case: Landing page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project aims to solve Norwegian Lab's frontend case of making a landing page consisting of:
+1. Above the fold content, with a CTA button
+2. An order form
+3. A footer with links to privacy policy, terms and conditions, and contact page.
 
-Currently, two official plugins are available:
+Hosted on Vercel at: https://norwegian-lab-landing-page-29re.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technology
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The project uses:
+- TypeScript for type support
+- React.js for frontend components
+- Vite for bundling
+- Speedy Web Compiler (SWC) for compilation
+- i18next for multiple language support
+- ESlint for linting
